@@ -17,14 +17,15 @@ function get(url) {
 
 function del(url){
     const request = new Request(baseUrl + url, {method: 'DELETE'});
-    
+
     return fetch(request).then(onSuccess, onError);
 }
 
 function onSuccess(response) {
     return response.json();
 }
-/* eslint-disable-line no-console */
+
 function onError(error) {
+    /* eslint-disable no-console */
     console.log(error) 
 }
